@@ -5,7 +5,7 @@ body {
     font-family: montserrat;
   }
   /* Videoen fylder hele skærmen */
-  #forside video {
+  #stjernehob video {
     position: fixed;      /* Fikseret i baggrunden */
     top: 0;
     left: 0;
@@ -14,16 +14,16 @@ body {
     object-fit: cover;    /* Fylder hele skærmen uden at strække */
     z-index: -1;          /* Sørger for at alt andet ligger ovenpå */
   }
-  #forside img {
+  #stjernehob img {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
   }
-  #forside a{
+  #stjernehobBtn{
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     background-color: black;
@@ -31,4 +31,12 @@ body {
     border: 2px solid white;
     cursor: pointer;
     padding: 20px;
+    transition: opacity 1s ease;
+    opacity: 0;
+
+  }
+ 
+  #stjernehobBtn.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
